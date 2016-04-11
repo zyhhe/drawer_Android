@@ -62,7 +62,7 @@ public class MainActivity extends Activity {
 
         // Now we add the content to the drawer since the menu is already there
         LayoutInflater inflater = getLayoutInflater();
-        View contentView = inflater.inflate(R.layout.main_content, null);
+        View contentView = inflater.inflate(R.layout.main_navigation_item, null);
         
        
         mDrawer.addView(contentView, 0);
