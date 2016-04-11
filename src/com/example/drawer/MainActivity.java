@@ -12,26 +12,18 @@
  */
 
 package com.example.drawer;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.Color;
-import android.graphics.Typeface;
-import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout.LayoutParams;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
 import android.view.*;
-import android.widget.TextView;
 import android.widget.Toast;
-
 import org.arasthel.googlenavdrawermenu.views.GoogleNavigationDrawer;
 
 public class MainActivity extends Activity {
 
     private Context mContext;
-    private ActionBarDrawerToggle drawerToggle;
     private GoogleNavigationDrawer mDrawer;
 
     @Override
@@ -63,7 +55,7 @@ public class MainActivity extends Activity {
 
         // Now we add the content to the drawer since the menu is already there
         LayoutInflater inflater = getLayoutInflater();
-        View contentView = inflater.inflate(R.layout.main_content, null);
+        View contentView = inflater.inflate(R.layout.main_navigation_item, null);
         
        
         mDrawer.addView(contentView, 0);
@@ -78,21 +70,11 @@ public class MainActivity extends Activity {
         });
 
         //Prepare the drawerToggle in order to be able to open/close the drawer
-        drawerToggle = new ActionBarDrawerToggle(this,
-                mDrawer,
-                R.drawable.ic_drawer,
-                R.string.app_name,
-                R.string.app_name);
-
-
-        //Attach the DrawerListener
-        mDrawer.setDrawerListener(drawerToggle);
     }
 
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
-        drawerToggle.syncState();
     }
 
 
