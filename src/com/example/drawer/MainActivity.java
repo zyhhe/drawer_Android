@@ -12,20 +12,13 @@
  */
 
 package com.example.drawer;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.Color;
-import android.graphics.Typeface;
-import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout.LayoutParams;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
 import android.view.*;
-import android.widget.TextView;
 import android.widget.Toast;
-
 import org.arasthel.googlenavdrawermenu.views.GoogleNavigationDrawer;
 
 public class MainActivity extends Activity {
