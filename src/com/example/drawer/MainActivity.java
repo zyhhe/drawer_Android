@@ -31,7 +31,6 @@ import org.arasthel.googlenavdrawermenu.views.GoogleNavigationDrawer;
 public class MainActivity extends Activity {
 
     private Context mContext;
-    private ActionBarDrawerToggle drawerToggle;
     private GoogleNavigationDrawer mDrawer;
 
     @Override
@@ -78,21 +77,11 @@ public class MainActivity extends Activity {
         });
 
         //Prepare the drawerToggle in order to be able to open/close the drawer
-        drawerToggle = new ActionBarDrawerToggle(this,
-                mDrawer,
-                R.drawable.ic_drawer,
-                R.string.app_name,
-                R.string.app_name);
-
-
-        //Attach the DrawerListener
-        mDrawer.setDrawerListener(drawerToggle);
     }
 
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
-        drawerToggle.syncState();
     }
 
 
